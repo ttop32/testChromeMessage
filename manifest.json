@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "name": "testChromeMessage",
+  "description": "testChromeMessage",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+
+    
+  "content_scripts": [{
+    "js": ["contentScript.js"],
+    "run_at": "document_idle",
+    "all_frames": true,
+    "matches": ["<all_urls>"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
